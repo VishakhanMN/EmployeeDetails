@@ -1,0 +1,62 @@
+<div>
+    <div [formGroup]="loginForm" class="example-form">
+        <div class="employeeHeader">Add Employee</div>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput class="inputTypes" formControlName="name" type="text" />
+            <mat-error>Invalid name</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Mail</mat-label>
+            <input matInput class="inputTypes" formControlName="mail" type="text" />
+            <mat-error>Invalid mail</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Address 1</mat-label>
+            <input matInput class="inputTypes" formControlName="address1" type="text" />
+            <mat-error>Invalid address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Address 2</mat-label>
+            <input matInput class="inputTypes" formControlName="address2" type="text" />
+            <mat-error>Invalid address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Location lattitude</mat-label>
+            <input matInput class="inputTypes" formControlName="locLattitude" type="text" />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Location longitude</mat-label>
+            <input matInput class="inputTypes" formControlName="locLongitude" type="text" />
+            <mat-error>Invalid Location</mat-error>
+        </mat-form-field>
+
+        <div class="addLocation">
+            <button mat-button color="primary" (click)="getLocation()">Get location</button>
+        </div>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Phone number</mat-label>
+            <input matInput class="inputTypes" formControlName="phoneNumber" type="tel" />
+            <mat-error>Invalid phone number</mat-error>
+        </mat-form-field>
+
+        <div>
+            <mat-label *ngIf="!(url && url.length > 0)">Add image</mat-label>
+            <img [src]="url" *ngIf="url && url.length > 0" height="200">
+            <br />
+            <input type='file' (change)="processFile($event)">
+
+        </div>
+
+        <button mat-button color="primary" [disabled]="loginForm.invalid"
+            (click)="saveEmployeeDetails()">Submit</button>
+
+    </div>
+</div>
