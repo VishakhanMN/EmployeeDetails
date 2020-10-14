@@ -1,0 +1,77 @@
+.container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+}
+
+.login-container{
+    position: absolute;
+    height:300px;
+    top:50%;
+    left:50%;
+    margin-top: -150px;
+    width: 400px;
+    margin-left: -165px;
+    font-size: 14px;
+}
+
+.title{
+display: flex;
+margin: 10px 0px;
+}
+
+.labelForName{
+    display: block;
+    width:40%;
+}
+
+.inputTypes{
+    display: block;
+    width:80%;
+}
+
+.errorInfo{
+    border: 1px solid red;
+}
+
+.tag{
+    width: 100%;
+}
+
+.employeeHeader {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.submitBtn{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.app-container {
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.btn-delete-user {
+    width: 40px;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+img{
+    width: 170px;
+    margin-left: 11px;
+}
