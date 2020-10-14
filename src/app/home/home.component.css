@@ -1,0 +1,18 @@
+.getNames:hover{
+    cursor: pointer;
+}
+
+.encloseDetails{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.showNames{
+    position: absolute;
+    right: 70%;
+}
+
+.showDetails{
+    position: absolute;
+    right: 30%;
+}
