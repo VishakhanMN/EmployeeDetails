@@ -1,17 +1,28 @@
 <div class="encloseDetails">
-    <mat-list role="list" class="getNames">
-        <mat-list-item role="listitem" *ngFor="let emp of empDetails" (click)="showDetails(emp)"> {{emp?.name}}
-        </mat-list-item>
-    </mat-list>
+    <div class="showName">
+        <div class="userNames">
+            <div class="listitem" *ngFor="let emp of empDetails" (click)="showDetails(emp)">
+                <i class="zmdi zmdi-account"></i>
+                <div>
+                    {{emp?.name}}
+                </div>
 
-    <mat-list role="list" *ngIf="onClickName">
-        <!-- <img [src]="selectedEmployee.imageURL" height="200"> -->
-        <mat-list-item role="listitem"> Name:{{selectedEmployee.name}} </mat-list-item>
-        <mat-list-item role="listitem"> Mail:{{selectedEmployee.mail}} </mat-list-item>
-        <mat-list-item role="listitem"> Address 1:{{selectedEmployee.address1}} </mat-list-item>
-        <mat-list-item role="listitem"> Address 2:{{selectedEmployee.address2}} </mat-list-item>
-        <mat-list-item role="listitem"> Location lattitude:{{selectedEmployee.locLattitude}} </mat-list-item>
-        <mat-list-item role="listitem"> Location longitude:{{selectedEmployee.locLongitude}} </mat-list-item>
-        <mat-list-item role="listitem"> Phone number:{{selectedEmployee.phoneNumber}} </mat-list-item>
-    </mat-list>
+            </div>
+        </div>
+
+        <div class="userDetails">
+            <div class="placeholderText" *ngIf="!onClickName">View user details</div>
+            <mat-list role="list" *ngIf="onClickName">
+                <!-- <img [src]="selectedEmployee.imageURL" height="200"> -->
+                <mat-list-item role="listitem"> Name:{{selectedEmployee.name}} </mat-list-item>
+                <mat-list-item role="listitem"> Mail:{{selectedEmployee.mail}} </mat-list-item>
+                <mat-list-item role="listitem"> Address 1:{{selectedEmployee.address1}} </mat-list-item>
+                <mat-list-item role="listitem"> Address 2:{{selectedEmployee.address2}} </mat-list-item>
+                <mat-list-item role="listitem"> Location lattitude:{{selectedEmployee.locLattitude}} </mat-list-item>
+                <mat-list-item role="listitem"> Location longitude:{{selectedEmployee.locLongitude}} </mat-list-item>
+                <mat-list-item role="listitem"> Phone number:{{selectedEmployee.phoneNumber}} </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+
 </div>
