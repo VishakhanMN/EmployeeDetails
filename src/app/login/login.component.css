@@ -3,6 +3,8 @@
     height: 100%;
     position: fixed;
     overflow: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .login-container{
@@ -45,10 +47,16 @@ margin: 10px 0px;
     font-size: 18px;
 }
 
+.errorValidation{
+    font-size: 10px;
+}
+
 .submitBtn{
     text-align: center;
     padding-top: 15px;
 }
+
+a { cursor: pointer; }
 
 .app-container {
     min-height: 320px;
