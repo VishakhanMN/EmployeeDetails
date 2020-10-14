@@ -3,16 +3,50 @@
 }
 
 .encloseDetails{
-    display: flex;
-    justify-content: space-evenly;
+    height: 100%;
+    position: fixed;
 }
 
-.showNames{
-    position: absolute;
-    right: 70%;
+.showName{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
 }
 
 .showDetails{
     position: absolute;
     right: 30%;
+}
+
+.listitem {
+    padding: 20px;
+    border: 1px solid #c4c4cd;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.listitem:hover{
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+
+.userNames{
+    width: 80%;
+    display: flex;
+    height: 85px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.userDetails{
+    width: 20%;
+    background: #f2f2f2;
+    height: 100%;
+}
+
+.placeholderText{
+    padding: 50% 10%;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.6;
 }
