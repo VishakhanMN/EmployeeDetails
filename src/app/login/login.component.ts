@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
       ...this.loginForm.value,
       locLattitude: this.loginForm.get('locLattitude').value,
       locLongitude: this.loginForm.get('locLongitude').value,
-      imageURL: this.url
+      // imageURL: this.url
     };
     this.employeeDetailsService.saveEmployeeDetails(details);
 
@@ -76,10 +76,10 @@ export class LoginComponent implements OnInit {
     var reader = new FileReader();
     reader.readAsDataURL(event.target.files[0]);
     reader.onload = (event) => {
-      this.url = event.target.result;
+      if (event.target)
+        this.url = (event.target as any).result;
     }
   }
-
 
   // processFile(fileList: FileList) {
   //   this.fileToUpload = fileList.item(0);
@@ -110,7 +110,6 @@ export class LoginComponent implements OnInit {
   // });
 
   // reader.readAsDataURL(file);
-
 
   // private onSuccess() {
   //   this.selectedFile.pending = false;
